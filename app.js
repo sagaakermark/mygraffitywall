@@ -74,6 +74,7 @@ app.use(
     store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
 );
+
 app.use(flash());
 require("./passport")(app);
 
@@ -85,5 +86,8 @@ app.use("/auth", authRoutes);
 
 const exploreRoutes = require("./routes/explore");
 app.use("/explore", exploreRoutes);
+
+const adminRoutes = require("./routes/admin");
+app.use("/admin", adminRoutes);
 
 module.exports = app;

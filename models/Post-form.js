@@ -8,7 +8,8 @@ const postSchema = new Schema({
   artist: String,
   area: String,
   adress: String,
-  postBy: String
+  postBy: String,
+  approved: { type: Boolean, default: false }
 });
 
 const Post = mongoose.model("Post", postSchema);

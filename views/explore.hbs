@@ -3,7 +3,6 @@
     aria-label="Search">
   <i class="fas fa-search" aria-hidden="true"></i>
 </form>
-{{#each wallList}}
-
+{{#each posts}}
+<p> {{this.img}} {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} {{this.postBy}} </p>
 {{/each}}
-
