@@ -6,6 +6,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
+const Explore = require("../models/Explore");
 
 const bcryptSalt = 10;
 
@@ -17,6 +18,19 @@ mongoose
   .catch(err => {
     console.error('Error connecting to mongo', err)
   });
+
+
+let wall = [
+  {
+img:"non",
+title:"Boi",
+artist:"unknown",
+about:"no one knows",
+area:"corner",
+adress:"heylo123"
+  }
+]
+
 
 let users = [
   {
