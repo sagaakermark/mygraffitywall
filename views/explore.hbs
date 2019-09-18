@@ -1,8 +1,19 @@
-<form class="form-inline md-form form-sm active-cyan-2 mt-2">
-  <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-    aria-label="Search">
+<form class="form-inline md-form form-sm active-cyan-2 mt-2" method="POST" action="/explore">
+  <input class="form-control form-control-sm mr-3 w-75 heya" type="text" placeholder="Search" aria-label="Search">
   <i class="fas fa-search" aria-hidden="true"></i>
 </form>
 {{#each posts}}
-<p> {{this.img}} {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} {{this.postBy}} </p>
+<div class="search-post">
+  <p> {{this.img}} {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} {{this.postBy}}
+  </p>
+</div>
 {{/each}}
+
+<script>
+  //first get value of your input let search = document.querySelector(".heya")
+  let search = document.querySelector(".heya")
+  //get all the divs dom manipulation put in an array
+  var divs = document.getElementsByClassName('search-post');
+  // on search Onchange() -> getting all the divs and appending filtering by filter value
+  search.onChange()
+</script>

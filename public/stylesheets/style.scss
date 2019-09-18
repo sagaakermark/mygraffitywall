@@ -1,8 +1,142 @@
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.navHeading {
+  font-family: 'Saira Stencil One', cursive;
+  font-size: 3.2em;
+  margin: 10px 0;
+}
+
+.homepage-heading {
+
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+}
+
+.text-intro {
+
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+}
+
+h1 {
+  font-size: 3.2em;
+  margin: 50px 0;
+
+}
+
+h2 {
+
+  margin: 0;
+  font-size: 2.5em;
+}
+
+h3 {
+
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.1em;
+
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: underline;
+  color: black;
+}
+
+// .overlay {
+//   height: 100%;
+//   width: 0;
+//   position: fixed;
+//   z-index: 1;
+//   top: 0;
+//   left: 0;
+//   background-color: black;
+//   background-color: rgba(0, 0, 0, 0.95);
+//   overflow-x: hidden;
+//   transition: 0.7s;
+// }
+
+// .overlay-content {
+//   font-family: 'DM Serif Display', serif;
+//   position: relative;
+//   top: 15%;
+//   width: 100%;
+//   text-align: center;
+//   margin-top: 30px;
+// }
+
+// navbar
+
+.navbar {
+  height: 100%;
+  transition: 0.7s;
+}
+
+// navbar content
+.pos-f-t {
+  position: relative;
+  width: 100%;
+  text-align: center;
+
+}
+
+// footer
+
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+// postForm
+.post-form {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-size: 1.5em;
+  margin: 7%;
+}
+
+.newpost-text {
+  padding: 2%;
+  font-size: 2.5em;
+}
+
+.btn-submit {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  color: rgb(56, 161, 29);
+  border: 1px solid rgb(56, 161, 29);
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 30%;
+}
+
+.btn-submit:hover {
+  color: #FFF;
+  background: #900;
+}
+
+.list-items {
+  margin: 2%;
 }

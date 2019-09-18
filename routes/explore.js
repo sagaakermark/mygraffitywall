@@ -5,22 +5,42 @@ const Post = require("../models/Post-form");
 
 //  GET /explore
 router.get("/", (req, res, next) => {
-  Post.find({ approved: true })
+  Post.find({
+      approved: true
+    })
     .then(data => {
       console.log(data);
-      res.render("explore", { posts: data });
+      res.render("explore", {
+        posts: data
+      });
     })
     .catch(err => console.log(err));
   // gets the wall collection
   // render the explore view with the wall data
 });
 
+
+
 //  POST /explore
 // creates the post collection
 // render the explore view with the post collection
 router.post("/", (req, res, next) => {
-  let { title, artist, description, area, adress, postBy } = req.body;
-  Post.create({ title, artist, description, area, adress, postBy })
+  let {
+    title,
+    artist,
+    description,
+    area,
+    adress,
+    postBy
+  } = req.body;
+  Post.create({
+      title,
+      artist,
+      description,
+      area,
+      adress,
+      postBy
+    })
     .then(post => {
       console.log(`Success! Post was added to the database.`);
       res.redirect("/explore");
@@ -30,11 +50,11 @@ router.post("/", (req, res, next) => {
       next(err);
     });
   // ?????
-  Picture.find((err, pictures) => {
-    res.render("explore", {
-      pictures
-    })
-  })
+  // Picture.find((err, pictures) => {
+  //   res.render("explore", {
+  //     pictures
+  //   })
+  // })
 });
 
 //  POST /explore
@@ -69,6 +89,8 @@ router.get("/postForm", (req, res, next) => {
   // render the explore view with the wall data
   res.render("postForm");
 });
+
+
 
 
 module.exports = router;
