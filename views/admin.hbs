@@ -1,0 +1,7 @@
+<h1>ADMINS SIDA</h1>
+
+{{#each posts}}
+<p> {{this.img}} {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} {{this.postBy}} </p>
+<form action="/admin/posts/{{this._id}}/approve" method="post"><button>Approve</button></form>
+{{/each}}
+
