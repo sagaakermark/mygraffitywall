@@ -11,32 +11,40 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Saira+Stencil+One&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  </div>
+  <div>
   <nav class="navbar navbar-dark bg-dark overlay">
-    <h1 class=" h4 navHeading"> GRAFFITY WALL </h1>
-    <button class="navbar-toggler" id="override" type="button" data-toggle="collapse"
-      data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
-      aria-label="Toggle navigation">
+    <h1 class="text-white h4 navHeading"> GRAFFITY WALL </h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
   </div>
-  <div class="pos-f-t">
+    <div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
       {{!-- <div class="bg-dark p-4"></div> --}}
       <h5 class="text-white h4"> <a href="/">Home</a></h5>
       <h5 class="text-white h4"><a href="/explore">Explore</a></h5>
-      <h5 class="text-white h4"><a href="/explore/postForm">Post</a></h5>
-      <h5 class="text-white h4"><a href="/auth/login">Login</a></h5>
-      <h5 class="text-white h4"><a href="/auth/signup">Signup</a></h5>
-      <h5 class="text-white h4"> <a href="/admin/posts">Admin</a></h5>
+        {{#if user}}
+        <h5 class="text-white h4"><a href="/explore/profile">Your profile</a></h5>
+        <h5 class="text-white h4"><a href="/explore/postForm">Post</a></h5>
+        <h5 class="text-white h4"><a href="/auth/logout">Logout</a></h5>
+        <h5 class="text-white h4"> <a href="/admin/posts">Admin</a></h5>
+        {{else}} 
+        <h5 class="text-white h4"><a href="/auth/login">Login</a></h5>
+       <h5 class="text-white h4"><a href="/auth/signup">Signup</a></h5>
+        {{/if}}
+       
+       
     </div>
-  </div>
+
+
   <div class="page-wrapper">
     {{{body}}}
   </div>
@@ -60,3 +68,4 @@
 </body>
 
 </html>
+

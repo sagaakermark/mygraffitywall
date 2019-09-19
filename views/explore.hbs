@@ -1,19 +1,29 @@
-<form class="form-inline md-form form-sm active-cyan-2 mt-2" method="POST" action="/explore">
-  <input class="form-control form-control-sm mr-3 w-75 heya" type="text" placeholder="Search" aria-label="Search">
+<form class="form-inline md-form form-sm active-cyan-2 mt-2"  action="/explore/search">
   <i class="fas fa-search" aria-hidden="true"></i>
+  <input id='searchBar' name="search" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+    aria-label="Search">
+    <button type="submit">search</button>
 </form>
-{{#each posts}}
-<div class="search-post">
-  <p> {{this.img}} {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} {{this.postBy}}
-  </p>
-</div>
+{{#each posts}} 
+<div class="postsInfo">
+<div>  {{this.title}} </div>
+ <div> {{this.description}}</div>
+  <div> {{this.artist}}</div> 
+  <div class="findlocation"> {{this.area}}</div> 
+  <div> {{this.adress}} </div>
+  <div> <img src={{this.img}} alt=""></div>
+  </div>
 {{/each}}
 
 <script>
   //first get value of your input let search = document.querySelector(".heya")
-  let search = document.querySelector(".heya")
+
+  //search.addEventListener("change", getInput(event))
   //get all the divs dom manipulation put in an array
-  var divs = document.getElementsByClassName('search-post');
+  var divs = document.getElementsByClassName('findlocation');
   // on search Onchange() -> getting all the divs and appending filtering by filter value
-  search.onChange()
+
+
+
+
 </script>
