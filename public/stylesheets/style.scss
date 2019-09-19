@@ -8,26 +8,40 @@ html {
 }
 
 body {
-  padding: 50px;
+  // padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   max-width: 650px;
   margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
+.carousel-item {
+  background-color: red
+}
 
+.d-block {
+  height: 400px;
+  // width: 100%;
+}
 
 .homepage-heading {
 
-  position: relative;
+  // position: relative;
   top: 15%;
   width: 100%;
   text-align: center;
+  text-decoration-line: underline;
   padding: 2%;
-  border: 0.25px solid rgb(0, 0, 0);
-  border-top: none;
+  border: 0.10px solid rgb(107, 101, 101);
+  // border-top: none;
+  border-bottom: none;
   border-left: none;
   border-right: none;
+  background-color: rgba(94, 100, 94, 0.1)
 }
 
 .text-intro {
@@ -36,7 +50,7 @@ body {
   width: 100%;
   text-align: center;
   padding: 2%;
-  // border: 0.25px solid rgb(0, 0, 0);
+  background-color: rgba(94, 100, 94, 0.1) // border: 0.25px solid rgb(0, 0, 0);
 }
 
 h1 {
@@ -66,14 +80,14 @@ h4 {
 a {
   text-decoration-style: solid;
   color: black;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 
 // navbar
 
 .navbar {
-  height: 100%;
+  height: 200px;
   transition: 0.7s;
   background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg");
 
@@ -98,9 +112,11 @@ a {
 #override {
   color: #900;
   background-color: darkslategray;
-
 }
 
+.navbar-toggler {
+  color: black
+}
 
 // footer
 
@@ -108,7 +124,7 @@ a {
 #sticky-footer {
   flex-shrink: none;
   background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg");
-  height: 0%;
+  // height: 0%;
 }
 
 #footer-text {
@@ -195,4 +211,13 @@ a {
   text-align: left;
   font-size: 80%;
 
+}
+
+
+.link a {
+  font-weight: 900;
+}
+
+.page-wrapper {
+  flex: 1;
 }
