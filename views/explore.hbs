@@ -1,8 +1,9 @@
-<form class="form-inline md-form form-sm active-cyan-2 mt-2">
+<form class="form-inline md-form form-sm active-cyan-2 mt-2" method="GET" action="/explore">
   <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-    aria-label="Search">
+    aria-label="Search" name="search" >
   <i class="fas fa-search" aria-hidden="true"></i>
 </form>
-{{#each posts}}
-<p> {{this.img}} {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} {{this.postBy}} </p>
+{{#each posts}} 
+<p>  {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} </p>
+<img src={{this.img}} alt="">
 {{/each}}
