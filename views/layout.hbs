@@ -10,32 +10,38 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Saira+Stencil+One&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 </head>
 
 <body>
-  <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4"></div>
-      <h6 class="text-white h4"> <a href="/">Home</a></h5>
-        <h6 class="text-white h4"><a href="/explore/postForm">Post</a></h5>
-        {{#if user}}
-        <h6 class="text-white h4"><a href="/auth/logout">Logout</a></h5>
-        {{else}} 
-        <h6 class="text-white h4"><a href="/auth/login">Login</a></h5>
-       <h6 class="text-white h4"><a href="/auth/signup">Signup</a></h5>
-        {{/if}}
-       <h6 class="text-white h4"> <a href="/admin/posts">admin</a></h5>
-       <h6 class="text-white h4"><a href="/explore">GraffityWall</a></h5>
-    </div>
+
   </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <h1 class="text-white h4"> GRAFFITY WALL </h1>
+  <nav class="navbar navbar-dark bg-dark overlay">
+    <h1 class="text-white h4 navHeading"> GRAFFITY WALL </h1>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
       aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
   </div>
+    <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4"></div>
+      <h5 class="text-white h4"> <a href="/">Home</a></h5>
+      <h5 class="text-white h4"><a href="/explore">Explore</a></h5>
+        {{#if user}}
+        <h5 class="text-white h4"><a href="/explore/profile">Your profile</a></h5>
+        <h5 class="text-white h4"><a href="/explore/postForm">Post</a></h5>
+        <h5 class="text-white h4"><a href="/auth/logout">Logout</a></h5>
+        <h5 class="text-white h4"> <a href="/admin/posts">Admin</a></h5>
+        {{else}} 
+        <h5 class="text-white h4"><a href="/auth/login">Login</a></h5>
+       <h5 class="text-white h4"><a href="/auth/signup">Signup</a></h5>
+        {{/if}}
+       
+       
+    </div>
 
   {{{body}}}
 
@@ -49,6 +55,12 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="/javascripts/script.js"></script>
+
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; GRAFFITY WALL</small>
+    </div>
+  </footer>
 
 </body>
 </html>

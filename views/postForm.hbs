@@ -1,30 +1,31 @@
 <h1>SHARE YOUR FAVOURITE ARTS</h1>
-<h3>New Post</h3>
+<h3 class="newpost-text">New Post</h3>
 {{!-- img form --}}
-<section>
+<section class="post-form">
     <form action="/explore" method="post" enctype="multipart/form-data">
-        <h2>Upload your photo</h2>
-        {{!-- url --}}
-        <input type="text" name="name">
-        <input type="file" name="photo">
+        <li class="list-items">
+            {{!-- url --}}
+            <label for="image">Image: </label>
+            <input type="file" name="photo">
 
-        <li>
+        </li>
+        <li class="list-items">
             <label for="title">Title: </label>
             <input type="text" name="title" id="title">
         </li>
-        <li>
+        <li class="list-items">
             <label for="artist">Artist: </label>
             <input type="text" name="artist" id="artist">
         </li>
-        <li>
+        <li class="list-items">
             <label for="description">Description: </label>
             <input type="text" name="description" id="description">
         </li>
-        <li>
+        <li class="list-items">
             <label for="area">Area: </label>
             <input type="text" name="area" id="area">
         </li>
-        <li>
+        <li class="list-items">
             <label for="adress">Adress: </label>
             <input type="text" name="adress" id="adress">
         </li>

@@ -6,5 +6,6 @@
 {{#each posts}} 
 <p>  {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} {{this.postBy}} </p>
 <img src={{this.img}} alt="">
+<a href="/explore/delete/{{this._id}}">delete post</a>
 {{/each}}
 </body>

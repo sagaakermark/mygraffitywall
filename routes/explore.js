@@ -8,12 +8,21 @@ router.get("/", (req, res, next) => {
   console.log(req.query.search);
   Post.find({ approved: true })
     .then(data => {
-      console.log(data);
-      res.render("explore", { posts: data });
+      res.render("explore", { posts: data, user: req.user });
     })
     .catch(err => console.log(err));
   // gets the wall collection
   // render the explore view with the wall data
+});
+
+router.get("/search", (req, res) => {
+  Post.find().then(allPosts => {
+    let filteredPost = allPosts.filter(el =>
+      el.area.toLowerCase().startsWith(req.query.search.toLowerCase())
+    );
+    res.render("explore", { posts: filteredPost, user: req.user });
+  });
+  //Post.find({area: search}).then(...).catch(err => console.log(err))
 });
 
 const loginCheck = () => {
@@ -28,9 +37,8 @@ const loginCheck = () => {
     }
   };
 };
-//  POST /explore
+
 // creates the post collection
-// render the explore view with the post collection
 router.post(
   "/",
   loginCheck(),
@@ -60,13 +68,19 @@ router.post(
 // match the postId with the userId and display the posts in users profile
 
 router.get("/profile", (req, res) => {
-  //[{ $match: { user: Post.postID } }]
   Post.find({ loggedUser: req.user._id })
     .populate("loggedUser")
     .then(posts => {
       console.log(posts);
-      res.render("profile", { posts });
+      res.render("profile", { posts, user: req.user });
     });
+});
+
+// delete post in your /profile
+router.get("/delete/:id", (req, res) => {
+  Post.findByIdAndDelete(req.params.id).then(() =>
+    res.redirect("/explore/profile")
+  );
 });
 
 // /explore/postForm
