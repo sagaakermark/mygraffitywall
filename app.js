@@ -14,7 +14,7 @@ const MongoStore = require("connect-mongo")(session);
 const flash = require("connect-flash");
 
 mongoose
-  .connect("mongodb://localhost/mygraffitywall", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/graffitywall", {
     useNewUrlParser: true
   })
   .then(x => {

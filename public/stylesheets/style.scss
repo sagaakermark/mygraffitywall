@@ -1,7 +1,11 @@
 * {
-  font-family: 'Roboto Condensed', sans-serif;
+  // font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
+html {
+  overflow-y: scroll;
+}
 
 body {
   padding: 50px;
@@ -11,11 +15,7 @@ body {
   margin: 0 auto;
 }
 
-.navHeading {
-  font-family: 'Saira Stencil One', cursive;
-  font-size: 3.2em;
-  margin: 10px 0;
-}
+
 
 .homepage-heading {
 
@@ -24,6 +24,10 @@ body {
   width: 100%;
   text-align: center;
   padding: 2%;
+  border: 0.25px solid rgb(0, 0, 0);
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 .text-intro {
@@ -32,6 +36,7 @@ body {
   width: 100%;
   text-align: center;
   padding: 2%;
+  // border: 0.25px solid rgb(0, 0, 0);
 }
 
 h1 {
@@ -59,37 +64,26 @@ h4 {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration-style: solid;
   color: black;
+  font-weight: bold;
 }
 
-// .overlay {
-//   height: 100%;
-//   width: 0;
-//   position: fixed;
-//   z-index: 1;
-//   top: 0;
-//   left: 0;
-//   background-color: black;
-//   background-color: rgba(0, 0, 0, 0.95);
-//   overflow-x: hidden;
-//   transition: 0.7s;
-// }
-
-// .overlay-content {
-//   font-family: 'DM Serif Display', serif;
-//   position: relative;
-//   top: 15%;
-//   width: 100%;
-//   text-align: center;
-//   margin-top: 30px;
-// }
 
 // navbar
 
 .navbar {
   height: 100%;
   transition: 0.7s;
+  background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg");
+
+}
+
+.navHeading {
+  font-family: 'Saira Stencil One', cursive;
+  font-size: 3.2em;
+  margin: 10px 0;
+  color: darkslategray;
 }
 
 // navbar content
@@ -97,28 +91,45 @@ a {
   position: relative;
   width: 100%;
   text-align: center;
+  background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg");
 
 }
+
+#override {
+  color: #900;
+  background-color: darkslategray;
+
+}
+
 
 // footer
 
 
 #sticky-footer {
   flex-shrink: none;
+  background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg");
+  height: 0%;
+}
+
+#footer-text {
+  color: black;
+  display: flex;
+  justify-content: last baseline;
 }
 
 // postForm
 .post-form {
   position: relative;
   width: 100%;
-  text-align: left;
+
   font-size: 1.5em;
   margin: 7%;
 }
 
 .newpost-text {
-  padding: 2%;
+  margin-top: 6%;
   font-size: 2.5em;
+  text-align: center;
 }
 
 .btn-submit {
@@ -139,4 +150,49 @@ a {
 
 .list-items {
   margin: 2%;
+
+}
+
+.list-box {
+  border-bottom: 2px solid black;
+  width: 90%;
+}
+
+
+
+// signup page
+.signup-form {
+  position: relative;
+  width: 100%;
+  font-size: 1.5em;
+  margin: 7%;
+}
+
+.btn-signup {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  color: rgb(56, 161, 29);
+  border: 1px solid rgb(56, 161, 29);
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 30%;
+}
+
+.btn-signup:hover {
+  color: #FFF;
+  background: #900;
+}
+
+.newsignup-text {
+  margin-top: 6%;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.account-message {
+  margin-top: -10px;
+  text-align: left;
+  font-size: 80%;
+
 }
