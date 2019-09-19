@@ -21,7 +21,7 @@ function isAdmin(req, res, next) {
 }
 
 // GET /admin/posts
-router.get("/posts", ensureAuthenticated, isAdmin, (req, res, next) => {
+router.get("/posts", isAdmin, (req, res, next) => {
   Post.find({ approved: false })
     .then(posts => {
       res.render("admin", { posts: posts });

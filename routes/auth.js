@@ -14,7 +14,7 @@ router.get("/login", (req, res, next) => {
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/explore/profile",          //shuld redirect to /explore/profile
+    successRedirect: "/explore/profile", //shuld redirect to /explore/profile
     failureRedirect: "/auth/login",
     failureFlash: true,
     passReqToCallback: true
@@ -39,22 +39,17 @@ router.post("/signup", (req, res, next) => {
       return;
     }
 
-
     const salt = bcrypt.genSaltSync(bcryptSalt);
     const hashPass = bcrypt.hashSync(password, salt);
 
     const newUser = new User({
       username,
       password: hashPass
-      
     });
-
     newUser
       .save()
       .then(() => {
-        res.redirect("/", {
-          message: "Your account was successfully created"
-        });
+        res.redirect("/");
       })
       .catch(err => {
         res.render("auth/signup", { message: "Oops, something went wrong!" });
