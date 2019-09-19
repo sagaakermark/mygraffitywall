@@ -4,8 +4,15 @@
   
 
 {{#each posts}} 
-<p>  {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} {{this.postBy}} </p>
-<img src={{this.img}} alt="">
-<a href="/explore/delete/{{this._id}}">delete post</a>
+<div class="postOnProfile">
+<div><img src={{this.img}} alt="Image cannot load"></div>
+<div>{{this.title}}</div>
+<div>{{this.description}}</div>
+<div>{{this.artist}}</div>
+<div>{{this.area}}</div>
+<div>{{this.adress}}</div>
+<div>{{this.postBy}}</div>
+<div class="deletePostbtn"><a href="/explore/delete/{{this._id}}">DELETE POST</a></div>
+</div>
 {{/each}}
 </body>

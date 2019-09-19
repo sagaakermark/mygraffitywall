@@ -22,7 +22,6 @@ router.get("/search", (req, res) => {
     );
     res.render("explore", { posts: filteredPost, user: req.user });
   });
-  //Post.find({area: search}).then(...).catch(err => console.log(err))
 });
 
 const loginCheck = () => {
