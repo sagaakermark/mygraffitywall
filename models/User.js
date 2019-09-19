@@ -9,7 +9,9 @@ const userSchema = new Schema(
       type: String,
       enum: ["GUEST", "EDITOR", "ADMIN"],
       default: "GUEST"
-    }
+    },
+    
+    
   },
   {
     timestamps: {

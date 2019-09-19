@@ -20,18 +20,6 @@ mongoose
   });
 
 
-let wall = [
-  {
-img:"non",
-title:"Boi",
-artist:"unknown",
-about:"no one knows",
-area:"corner",
-adress:"heylo123"
-  }
-]
-
-
 let users = [
   {
     username: "alice",

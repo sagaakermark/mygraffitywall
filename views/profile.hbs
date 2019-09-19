@@ -1,0 +1,10 @@
+<h1>{{posts.[0].loggedUser.username}}</h1>
+
+<body>
+  
+
+{{#each posts}} 
+<p>  {{this.title}} {{this.description}} {{this.artist}} {{this.area}} {{this.adress}} {{this.postBy}} </p>
+<img src={{this.img}} alt="">
+{{/each}}
+</body>

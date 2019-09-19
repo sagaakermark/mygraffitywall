@@ -17,11 +17,15 @@
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="bg-dark p-4"></div>
       <h6 class="text-white h4"> <a href="/">Home</a></h5>
-        <h6 class="text-white h4"><a href="/explore">GraffityWall</a></h5>
         <h6 class="text-white h4"><a href="/explore/postForm">Post</a></h5>
-      <h6 class="text-white h4"><a href="/auth/login">Login</a></h5>
+        {{#if user}}
+        <h6 class="text-white h4"><a href="/auth/logout">Logout</a></h5>
+        {{else}} 
+        <h6 class="text-white h4"><a href="/auth/login">Login</a></h5>
        <h6 class="text-white h4"><a href="/auth/signup">Signup</a></h5>
+        {{/if}}
        <h6 class="text-white h4"> <a href="/admin/posts">admin</a></h5>
+       <h6 class="text-white h4"><a href="/explore">GraffityWall</a></h5>
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">
@@ -47,9 +51,4 @@
   <script src="/javascripts/script.js"></script>
 
 </body>
-<<<<<<< HEAD
 </html>
-=======
-
-</html>
->>>>>>> 6083faf92264e966505ee9fdb3ab784e48ac4a10
