@@ -1,8 +1,303 @@
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  // font-family: 'Titillium Web', sans-serif;
+
+}
+
+html {
+  overflow-y: scroll;
+}
+
 body {
-  padding: 50px;
+  // padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  max-width: 650px;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-item {
+  background-color: red
+}
+
+.d-block {
+  height: 400px;
+  // width: 100%;
+}
+
+.homepage-heading {
+
+  // position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  text-decoration-line: underline;
+  padding: 2%;
+  border: 0.10px solid rgb(107, 101, 101);
+  // border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  background-color: rgba(94, 100, 94, 0.1)
+}
+
+.text-intro {
+
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+  background-color: rgba(94, 100, 94, 0.1) // border: 0.25px solid rgb(0, 0, 0);
+}
+
+h1 {
+  font-size: 3.2em;
+  margin: 50px 0;
+
+}
+
+h2 {
+
+  margin: 0;
+  font-size: 2.5em;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.1em;
+
 }
 
 a {
-  color: #00B7FF;
+  text-decoration-style: solid;
+  color: black;
+  font-weight: 900;
+}
+
+.navbar {
+  height: 100px;
+  background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg");
+
+}
+
+.navHeading {
+  font-family: 'Saira Stencil One', cursive;
+  font-size: 5em;
+  padding: 5%;
+  margin: 10px 0;
+  color: black;
+}
+
+
+#override {
+  color: #900;
+  background-color: darkslategray;
+}
+
+.navbar {
+  height: auto;
+}
+
+.navbar-toggler {
+  color: black;
+  background-color: rgba(94, 100, 94, 0.5);
+  display: flex;
+  justify-content: last baseline;
+
+}
+
+// footer
+
+
+#sticky-footer {
+  flex-shrink: none;
+  align-self: flex-end;
+  width: 100%;
+  background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg");
+  // height: 0%;
+  // flex: 1;
+}
+
+#footer-text {
+  color: black;
+  display: flex;
+  justify-content: last baseline;
+}
+
+// postForm
+.post-form {
+  position: relative;
+  //width: 100%;
+  font-size: 1.5em;
+
+  //margin: 7%;
+}
+
+.newpost-text {
+  margin-top: 6%;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.btn-submit {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  color: darkslategray;
+  border: 1px solid darkslategray;
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 30%;
+}
+
+.btn-submit:hover {
+  color: #FFF;
+  background: darkslategray;
+}
+
+.list-box {
+  border-bottom: 2px solid black;
+  width: 650px;
+  //outline: none;
+  box-shadow: 0 0 3px #CC0000;
+}
+
+// signup page
+.signup-form {
+  position: relative;
+  width: 100%;
+  font-size: 1.5em;
+  margin: 7%;
+  margin-left: 3%;
+}
+
+.btn-signup {
+  font-weight: bold;
+  font-size: 1.5em;
+  // 
+  color: darkslategray;
+  border: 1px solid darkslategray;
+  width: 40%;
+  margin-left: 20%;
+  margin-right: 30%;
+  display: flex;
+  align-self: center;
+  text-align: center;
+}
+
+.btn-signup:hover {
+  color: #FFF;
+  background: darkslategray;
+}
+
+.newsignup-text {
+  margin-top: 6%;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.account-message {
+  margin-top: -10px;
+  text-align: left;
+  font-size: 80%;
+
+}
+
+
+.link a {
+  font-weight: 900;
+}
+
+.page-wrapper {
+  flex: 1;
+}
+
+.auth-wrapper {
+  // display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+///////blendas css
+///explore.hbs
+.nameOfArt {
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center
+}
+
+.bb {
+  text-align: center;
+  font-size: 25px;
+}
+
+.postsInfo {
+  font-size: 1.5em;
+  width: 600px;
+  border: 8px solid darkgray;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+}
+
+.postsInfo:hover {
+  background-color: lightsteelblue;
+}
+
+.posSearch {
+  width: 650px;
+  height: 30px;
+  text-decoration: underline;
+}
+
+
+.searchBar {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  border: none;
+  outline: none;
+  width: 400px;
+  height: 30px;
+  transition: height 1s;
+  -webkit-transition: height 1s;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.searchBarBtn {
+  background-color: darkslategray;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: bolder;
+  float: right;
+  width: 100px;
+  height: 30px;
+
+}
+
+.searchBarBtn:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.exploreimg {
+  max-width: 100%;
+  height: auto;
+}
+
+.findlocation {
+  font-size: 20px;
+}
+
+.infoExplore {
+  font-size: 20px;
+  font-weight: bolder;
 }
