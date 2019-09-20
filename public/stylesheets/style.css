@@ -1,5 +1,5 @@
 * {
-  font-family: 'Titillium Web', sans-serif; }
+  font-family: 'Roboto Condensed', sans-serif; }
 
 html {
   overflow-y: scroll; }
@@ -21,7 +21,7 @@ body {
   height: 400px; }
 
 .homepage-heading {
-  top: 15%;
+  top: 10%;
   width: 100%;
   text-align: center;
   text-decoration-line: underline;
@@ -61,31 +61,33 @@ a {
   font-weight: 900; }
 
 .navbar {
-  height: 200px;
-  transition: 0.7s;
+  height: 100px;
   background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg"); }
 
 .navHeading {
   font-family: 'Saira Stencil One', cursive;
-  font-size: 3.2em;
+  font-size: 5em;
+  padding: 5%;
   margin: 10px 0;
-  color: darkslategray; }
-
-.pos-f-t {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg"); }
+  color: black; }
 
 #override {
   color: #900;
   background-color: darkslategray; }
 
+.navbar {
+  height: auto; }
+
 .navbar-toggler {
-  color: black; }
+  color: black;
+  background-color: rgba(94, 100, 94, 0.5);
+  display: flex;
+  justify-content: last baseline; }
 
 #sticky-footer {
   flex-shrink: none;
+  align-self: flex-end;
+  width: 100%;
   background-image: url("https://image.freepik.com/free-photo/brick-texture-with-scratches-cracks_73989-4714.jpg"); }
 
 #footer-text {
@@ -95,9 +97,7 @@ a {
 
 .post-form {
   position: relative;
-  width: 100%;
-  font-size: 1.5em;
-  margin: 7%; }
+  font-size: 1.5em; }
 
 .newpost-text {
   margin-top: 6%;
@@ -108,42 +108,43 @@ a {
   font-weight: bold;
   font-size: 1.5em;
   text-align: center;
-  color: #38a11d;
-  border: 1px solid #38a11d;
+  color: darkslategray;
+  border: 1px solid darkslategray;
   width: 40%;
   margin-left: 20%;
   margin-right: 30%; }
 
 .btn-submit:hover {
   color: #FFF;
-  background: #900; }
-
-.list-items {
-  margin: 2%; }
+  background: darkslategray; }
 
 .list-box {
   border-bottom: 2px solid black;
-  width: 90%; }
+  width: 650px;
+  box-shadow: 0 0 3px #CC0000; }
 
 .signup-form {
   position: relative;
   width: 100%;
   font-size: 1.5em;
-  margin: 7%; }
+  margin: 7%;
+  margin-left: 3%; }
 
 .btn-signup {
   font-weight: bold;
   font-size: 1.5em;
-  text-align: center;
-  color: #38a11d;
-  border: 1px solid #38a11d;
+  color: darkslategray;
+  border: 1px solid darkslategray;
   width: 40%;
   margin-left: 20%;
-  margin-right: 30%; }
+  margin-right: 30%;
+  display: flex;
+  align-self: center;
+  text-align: center; }
 
 .btn-signup:hover {
   color: #FFF;
-  background: #900; }
+  background: darkslategray; }
 
 .newsignup-text {
   margin-top: 6%;
@@ -160,5 +161,69 @@ a {
 
 .page-wrapper {
   flex: 1; }
+
+.auth-wrapper {
+  flex: 1;
+  height: 100%; }
+
+.nameOfArt {
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: center; }
+
+.bb {
+  text-align: center;
+  font-size: 25px; }
+
+.postsInfo {
+  font-size: 1.5em;
+  width: 600px;
+  border: 8px solid darkgray;
+  padding: 10px;
+  margin: 20px;
+  text-align: center; }
+
+.postsInfo:hover {
+  background-color: lightsteelblue; }
+
+.posSearch {
+  width: 650px;
+  height: 30px;
+  text-decoration: underline; }
+
+.searchBar {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  border: none;
+  outline: none;
+  width: 400px;
+  height: 30px;
+  transition: height 1s;
+  -webkit-transition: height 1s;
+  overflow: hidden;
+  font-size: 15px; }
+
+.searchBarBtn {
+  background-color: darkslategray;
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: bolder;
+  float: right;
+  width: 100px;
+  height: 30px; }
+
+.searchBarBtn:hover {
+  background-color: rgba(0, 0, 0, 0); }
+
+.exploreimg {
+  max-width: 100%;
+  height: auto; }
+
+.findlocation {
+  font-size: 20px; }
+
+.infoExplore {
+  font-size: 20px;
+  font-weight: bolder; }
 
 /*# sourceMappingURL=style.css.map */
