@@ -1,29 +1,43 @@
-<form class="form-inline md-form form-sm active-cyan-2 mt-2"  action="/explore/search">
-  <i class="fas fa-search" aria-hidden="true"></i>
-  <input id='searchBar' name="search" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+
+
+<!--<div class="posSearch">
+<form  action="/explore/search">
+<button class="searchBarBtn" type="submit">SEARCH</button>
+  <input class="searchBar" id='searchBar' name="search" type="text" placeholder="Search"
     aria-label="Search">
-    <button type="submit">search</button>
 </form>
+</div>
+
+<body>
+<div>
 {{#each posts}} 
-<div class="postsInfo">
-<div>  {{this.title}} </div>
- <div> {{this.description}}</div>
-  <div> {{this.artist}}</div> 
-  <div class="findlocation"> {{this.area}}</div> 
-  <div> {{this.adress}} </div>
-  <div> <img src={{this.img}} alt=""></div>
+<div class="nameOfArt"> {{this.title}} </div>
+<div class="exploreimg"> <img src={{this.img}} alt=""></div>
+ <div class="postsInfo">
+ <div class="nameOfArt">{{this.title}}</div>
+ <div class="infoExplore">"{{this.description}}". The artist is {{this.artist}}. You can find the work in {{this.area}}, {{this.adress}}.</div> 
   </div>
 {{/each}}
+</body>-->
+<head>
+  <div class="posSearch">
+    <form action="/explore/search">
+      <!--<button class="searchBarBtn" type="submit">SEARCH</button>-->
+      <input class="searchBar" id='searchBar' name="search" type="text" placeholder="Search"
+      aria-label="Search">
+    </form>
+  </div>
+</head>
+<body>
+  <div>
+    {{#each posts}}
+    <div class="nameOfArt"> {{this.title}} </div>
+    <div class="exploreimg"> <img src={{this.img}} alt=""></div>
+    <div class="postsInfo">
+      <div class="bb">{{this.title}}</div>
+      <div class="infoExplore">"{{this.description}}". The artist is {{this.artist}}. You can find the work in
+        {{this.area}}, {{this.adress}}.</div>
+    </div>
+    {{/each}}
+</body>
 
-<script>
-  //first get value of your input let search = document.querySelector(".heya")
-
-  //search.addEventListener("change", getInput(event))
-  //get all the divs dom manipulation put in an array
-  var divs = document.getElementsByClassName('findlocation');
-  // on search Onchange() -> getting all the divs and appending filtering by filter value
-
-
-
-
-</script>
